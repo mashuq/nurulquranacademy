@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_main_testimonials",
+  "info": {
+    "name": "Testimonial",
+    "icon": "ad"
+  },
+  "options": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Course": {
+      "type": "string"
+    },
+    "Testimonial": {
+      "type": "richtext"
+    }
+  }
+}

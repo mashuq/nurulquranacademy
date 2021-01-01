@@ -1,0 +1,35 @@
+{
+  "kind": "singleType",
+  "collectionName": "home",
+  "info": {
+    "name": "Home"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Headline": {
+      "type": "string"
+    },
+    "SiteDescription": {
+      "type": "richtext"
+    },
+    "MainTeacher": {
+      "type": "component",
+      "repeatable": false,
+      "component": "main.main-teacher"
+    },
+    "SupportingTeachers": {
+      "type": "component",
+      "repeatable": true,
+      "component": "main.supporting-teacher"
+    },
+    "Testimonials": {
+      "type": "component",
+      "repeatable": true,
+      "component": "main.testimonial"
+    }
+  }
+}

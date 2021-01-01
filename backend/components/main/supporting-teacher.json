@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_main_supporting_teachers",
+  "info": {
+    "name": "Supporting Teacher",
+    "icon": "address-book"
+  },
+  "options": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Education": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_main_main_teachers",
+  "info": {
+    "name": "Main Teacher",
+    "icon": "address-card"
+  },
+  "options": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Bio": {
+      "type": "richtext"
+    },
+    "ProfilePicture": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

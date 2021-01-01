@@ -61,9 +61,9 @@
       <div class="header-wrap-clone"></div>
     </header>
     <!-- #header end -->
-    |
+    <router-view />
   </div>
-  <router-view />
+  
 </template>
 
 <style scoped lang="css">
@@ -74,29 +74,25 @@
 
 
 <script>
-
-import { reactive, computed, onBeforeMount } from 'vue'
-import { useStore } from 'vuex'
+import { reactive, computed, onBeforeMount } from "vue";
+import { useStore } from "vuex";
 
 export default {
   setup() {
     const store = useStore();
 
     const state = reactive({
-      logo: computed(() => {
-        console.log(store.getters['site/logo']);
-      return store.getters['site/logo']})
+      logo: computed(() => store.getters["site/logo"]),
     });
 
-    onBeforeMount(async() => {
+    onBeforeMount(async () => {
       await store.dispatch("site/loadSite");
-    })
+    });
 
     return {
-      state
-    }
-  }
-}
-
+      state,
+    };
+  },
+};
 </script>
 

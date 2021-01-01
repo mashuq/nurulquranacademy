@@ -1,4 +1,4 @@
-import Api from '@/utils/Api'
+import api from '@/utils/api'
 
 const site = {
     namespaced: true,
@@ -15,7 +15,7 @@ const site = {
     },
     actions: {
         loadSite(context) {
-            Api().get("/site").then((response) => {
+            api().get("/site").then((response) => {
                 context.commit("saveSite", response.data)
             })
         }

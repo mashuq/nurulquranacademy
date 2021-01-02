@@ -60,10 +60,51 @@
       </div>
       <div class="header-wrap-clone"></div>
     </header>
-    <!-- #header end -->
+
     <router-view />
+
+    <footer id="footer" class="dark">
+      <div class="container">
+        <div class="footer-widgets-wrap">
+          <div class="row col-mb-50">
+            <div class="col-lg-4">
+              <div class="widget clearfix">
+                <img
+                  :src="state.logo" 
+                  alt="Image"
+                  class="footer-logo"
+                />
+                <div class="widget clearfix" v-html="state.footer.column1">
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="widget clearfix" v-html="state.footer.column2"></div>
+            </div>
+            <div class="col-lg-4">
+              <div class="widget clearfix"  v-html="state.footer.column3"></div>
+            </div>
+            <a :href="state.footer.facebook" class="social-icon si-small si-rounded topmargin-sm si-facebook">
+									<i class="icon-facebook"></i>
+									<i class="icon-facebook"></i>
+						</a>
+            <a :href="state.footer.youtube" class="social-icon si-small si-rounded topmargin-sm si-youtube">
+									<i class="icon-youtube"></i>
+									<i class="icon-youtube"></i>
+						</a>
+          </div>
+        </div>
+      </div>
+
+      <div id="copyrights">
+        <div class="container">
+          <div class="w-100 text-center">           
+            Copyrights &copy; 2021 All Rights Reserved by Nurul Quran Academy.
+          </div>
+        </div>
+      </div>
+    </footer>
   </div>
-  
 </template>
 
 <style scoped lang="css">
@@ -83,6 +124,7 @@ export default {
 
     const state = reactive({
       logo: computed(() => store.getters["site/logo"]),
+      footer: computed(() => store.getters["site/footer"]),
     });
 
     onBeforeMount(async () => {

@@ -1,35 +1,33 @@
 <template>
-<div>
-  <Revolution></Revolution>
+  <div class="clearfix">
+    <Revolution></Revolution>
     <section id="content">
-  <MainTeacher></MainTeacher>
-  <SupportingTeachers></SupportingTeachers>
-  <Testimonials></Testimonials>
+      <MainTeacher></MainTeacher>
+      <SupportingTeachers></SupportingTeachers>
+      <Testimonials></Testimonials>
     </section>
-</div>
+  </div>
 </template>
 
 <script>
 import { reactive, onMounted } from "vue";
 import { useStore } from "vuex";
-import Revolution from '../components/Revolution'
-import MainTeacher from '../components/MainTeacher'
-import SupportingTeachers from '../components/SupportingTeachers'
-import Testimonials from '../components/Testimonials'
+import Revolution from "../components/Revolution";
+import MainTeacher from "../components/MainTeacher";
+import SupportingTeachers from "../components/SupportingTeachers";
+import Testimonials from "../components/Testimonials";
 
 export default {
-  components : {
+  components: {
     Revolution,
     MainTeacher,
     SupportingTeachers,
-    Testimonials
-  }, 
+    Testimonials,
+  },
   setup() {
     const store = useStore();
 
-    const state = reactive({
-      
-    });
+    const state = reactive({});
 
     onMounted(async () => {
       await store.dispatch("home/loadHome");

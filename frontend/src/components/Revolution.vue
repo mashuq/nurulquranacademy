@@ -1,7 +1,7 @@
 <template>
   <section
     id="slider"
-    class="slider-element slider-parallax swiper_wrapper min-vh-60 min-vh-md-100 include-header"
+    class="slider-element swiper_wrapper min-vh-60 min-vh-md-100 include-header"
   >
     <div class="slider-inner">
       <div class="swiper-container swiper-parent">

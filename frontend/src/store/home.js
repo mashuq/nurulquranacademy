@@ -51,6 +51,26 @@ const home = {
                 }
             }
         },
+        supportingTeachers(state) {
+            try {
+                let list = state.home.SupportingTeachers.map(st => {return {name : st.Name, education : st.Education, id : st._id, gender : st.Gender}})
+                return list
+            } catch {
+                return []
+            }
+        },
+        testimonials(state) {
+            try {
+                console.log("here")
+                let list = state.home.Testimonials.map(st => {return {name : st.Name, course : st.Course, id : st._id, gender : st.Gender, testimonial : st.Testimonial}})
+                console.log(list)
+                return list
+            } catch(ex) {
+                console.log(ex)
+                return []
+            }
+        },
+
 
     }
 }

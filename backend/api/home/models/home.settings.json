@@ -2,7 +2,8 @@
   "kind": "singleType",
   "collectionName": "home",
   "info": {
-    "name": "Home"
+    "name": "Home",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -30,6 +31,17 @@
       "type": "component",
       "repeatable": true,
       "component": "main.testimonial"
+    },
+    "TopBackgroundImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
     }
   }
 }
